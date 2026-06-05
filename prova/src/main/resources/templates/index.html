@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="tabs">
+            <button class="tab active" onclick="mostrarAba('pedido', this)">
+                🍕 Fazer Pedido
+            </button>
+
+            <button class="tab" onclick="mostrarAba('pedidos', this)">
+                📦 Pedidos
+            </button>
+        </div>
+
+        <!-- ABA PEDIDO -->
+        <div id="pedido" class="aba ativa">
+
+            <h1>🍕 Monte sua Pizza</h1>
+
+            <h2>Escolha o sabor</h2>
+
+            <div class="opcoes">
+
+                <input type="radio" name="sabor" id="calabresa" checked>
+                <label for="calabresa">Calabresa</label>
+
+                <input type="radio" name="sabor" id="marguerita">
+                <label for="marguerita">Marguerita</label>
+
+                <input type="radio" name="sabor" id="frango">
+                <label for="frango">Frango c/ Catupiry</label>
+
+                <input type="radio" name="sabor" id="portuguesa">
+                <label for="portuguesa">Portuguesa</label>
+
+            </div>
+
+            <h2>Tamanho</h2>
+
+            <div class="tamanhos">
+
+                <input type="radio" name="tamanho" id="p" checked>
+                <label for="p">P</label>
+
+                <input type="radio" name="tamanho" id="m">
+                <label for="m">M</label>
+
+                <input type="radio" name="tamanho" id="g">
+                <label for="g">G</label>
+
+            </div>
+
+            <button id="btnFinalizar">
+                Finalizar Pedido
+            </button>
+
+        </div>
+
+        <!-- ABA PEDIDOS -->
+        <div id="pedidos" class="aba">
+
+            <h1>📦 Pedidos Realizados</h1>
+
+            <div id="listaPedidos"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
