@@ -3,6 +3,4 @@ services:
     name: sistema
     runtime: docker
     buildCommand: cd prova && ./gradlew clean build
-    
-
 
