@@ -10,5 +10,8 @@ COPY . .
 # Dar permissão ao gradlew
 RUN chmod +x prova/gradlew
 
-# Comando padrão (Render substitui pelo startCommand do render.yaml)
-CMD ["java", "-jar", "prova/build/libs/sistema-0.0.1-SNAPSHOT.jar"]
+# Rodar o build da aplicação
+RUN cd prova && ./gradlew clean build
+
+# Comando de inicialização da aplicação
+CMD ["java", "-jar", "prova/build/libs/prova-0.0.1-SNAPSHOT.jar"]
